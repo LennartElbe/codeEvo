@@ -6,5 +6,5 @@ php -S localhost:8000
 ```
 And connect to
 
-[Google](www.google.com)
+[http://localhost:8000](http://localhost:8000)
 
