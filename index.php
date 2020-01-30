@@ -2,41 +2,31 @@
 <HTML>
 <HEAD>
 <TITLE>Code Evo</TITLE>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./practice.js"></script>
     <script src="js/ace/ace.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
 </HEAD>
 
 <BODY>
     <div class="container-fluid">
+        <h1 style="margin-left: -15px">Code Evo</h1>
         <div class="row">
-            <div class="col-sm">
-                <h1>Code Evo</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div id="program-code"></div>
-        </div>
-        <div class="row">
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students</button>
-                <div class="dropdown-menu" id="dropdownSwitchEngine" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown" style="float: right;">
+                <button class="btn btn-secondary dropdown-toggle" style="margin-left: 10px" type="button" id="studentsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students</button>
+                <div class="dropdown-menu" id="dropdownSwitchStudent" aria-labelledby="dropdownMenuButton">
                 </div>
             </div>
-            <div class="col-sm" style="position: relative;">
-                <div id="program-code">
-                </div>
-            </div>
-            <div class="col-sm" style="position: relative; height: 500px;">
-                <div id="program-output">
+            <div class="dropdown" style="float: right;">
+                <button class="btn btn-secondary dropdown-toggle" style="margin-left: 10px" type="button" id="problemsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Problems</button>
+                <div class="dropdown-menu" id="dropdownSwitchProblem" aria-labelledby="dropdownMenuButton">
                 </div>
             </div>
         </div>
-        <div class="row">
-            <button class="btn btn-primary" type="button" id="butt">Press Me</button>
-            <button class="btn btn-info" type="button" id="clear">Clear Output</button>
+        <div class="col-md-12">
+            <div id="program-code" style="width: 50%; height: 600px"></div>
         </div>
     </div>
 </BODY>

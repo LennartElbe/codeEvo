@@ -1,0 +1,14 @@
+#program-code {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid grey;
+}
+
+.active,
+.btn:hover {
+    background-color: rgb(65, 64, 64);
+    color: white;
+}

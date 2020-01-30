@@ -1,0 +1,35 @@
+## hidden code
+
+def mk_coverage():
+    covered = set()
+    target = set(range(4))
+    count = 0
+    
+    def coverage(func):
+        nonlocal covered, target, count
+    
+        def wrapper(year):
+            nonlocal covered, count
+            if year % 4 != 0:
+                covered.add(0)
+            elif year % 100 != 0:
+                covered.add(1)
+            elif year % 400 != 0:
+                covered.add(2)
+            else:
+                covered.add(3)
+            r = func (year)
+            count += 1
+            return r
+        if func == "achieved": return len(covered)
+        if func == "required": return len(target)
+        if func == "count" : return count
+        functools.update_wrapper(wrapper, func)
+        return wrapper
+    return coverage
+
+coverage = mk_coverage ()
+try:
+    leap = coverage(leap)
+except:
+    pass

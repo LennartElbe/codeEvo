@@ -1,0 +1,46 @@
+## hidden code
+
+def mk_coverage():
+    covered = set()
+    target = set(range(6))
+    count = 0
+    original = None
+    
+    def coverage(func):
+        nonlocal covered, target, count, original
+    
+        def wrapper(n):
+            nonlocal covered, count
+            s = str (n)
+            lens = len (s)
+            if lens == 1:
+                covered.add(0)
+            if lens == 2:
+                covered.add(1)
+            if (lens > 2) and ( lenr % 2 == 0):
+                covered.add(2)
+            if lens > 2 and lenr % 2 == 1:
+                covered.add(3)
+            r = func (n)
+            if r:
+                covered.add (4)
+            else:
+                covered.add (5)
+            count += 1
+            return r
+        if func == "achieved": return len(covered)
+        if func == "required": return len(target)
+        if func == "count" : return count
+        if func == "original": return original
+        original = func
+        if func.__doc__:
+            wrapper.__doc__ = func.__doc__
+        wrapper.__hints__ = typing.get_type_hints (func)
+        return wrapper
+    return coverage
+
+coverage = mk_coverage()
+try:
+    is_palindromic = coverage(is_palindromic)
+except:
+    pass

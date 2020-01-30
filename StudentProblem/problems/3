@@ -1,0 +1,41 @@
+## hidden code
+
+def mk_coverage():
+    covered = set()
+    target = set(range(6))
+    count = 0
+    
+    def coverage(func):
+        nonlocal covered, target, count
+    
+        def wrapper(key):
+            nonlocal covered, count
+            if key == "A":
+                covered.add(0)
+            elif key != "":
+                covered.add(1)
+            if len (key) > 1:
+                covered.add(2)
+                if key == key[0] * len (key):
+                    covered.add(4)
+                else:
+                    covered.add(5)
+            if len (key) > 2:
+                covered.add (3)
+                
+            r = func (key)
+            count += 1
+            return r
+        if func == "achieved": return len(covered)
+        if func == "required": return len(target)
+        if func == "count" : return count
+        functools.update_wrapper (wrapper, func)
+        return wrapper
+    return coverage
+
+coverage = mk_coverage ()
+
+try:
+    Vigenere = coverage (Vigenere)
+except:
+    pass
