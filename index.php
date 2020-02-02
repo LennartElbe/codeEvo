@@ -26,6 +26,13 @@
                 <div class="dropdown-menu" id="dropdownSwitchProblem" aria-labelledby="dropdownMenuButton">
                 </div>
             </div>
+            <div class="dropdown" style="float: right;">
+                <button class="btn btn-secondary dropdown-toggle" style="margin-left: 10px" type="button" id="versionsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Versions <span class="whichVersion"></span></button>
+                <div class="dropdown-menu" id="dropdownSwitchVersion" aria-labelledby="dropdownMenuButton">
+                </div>
+            </div>
+            <button type="button" class="btn btn-light" id="previous">&lt;</button>
+            <button type="button" class="btn btn-light" id="next">&gt;</button>
         </div>
         <div class="col-md-12">
             <div id="program-code" style="width: 50%; height: 600px"></div>
