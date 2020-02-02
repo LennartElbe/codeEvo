@@ -1,4 +1,4 @@
-## Test project to check JavaScript setup of local webpage
+## Site used to explore iterations of solutions to coding questions
 
 In order to start this project do the following
 ```
