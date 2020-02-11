@@ -36,12 +36,15 @@ jQuery(document).ready(function() {
             ar[_data[student][i][0]] = 1;
         }
         var ar2 = Object.keys(ar);
+        jQuery('#studentsDropDown span.whichStudent').text(student);
         for (var i = 0; i < ar2.length; i++) {
             jQuery('#dropdownSwitchProblem').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar2[i] + "\">" + ar2[i] + "</a>");
         }
     });
     // add versions to dropdown
     jQuery('#dropdownSwitchProblem').on('click', "a.dropdown-item", function() {
+        editor.setValue("Please select a version.");
+        jQuery('#dropdownSwitchVersion').children().remove();
         jQuery("#dropdownSwitchProblem").children().removeClass('active');
         jQuery(this).addClass('active');
         var problem = jQuery(this).text();
@@ -52,9 +55,12 @@ jQuery(document).ready(function() {
                 ar.push(_data[student][i][1]);
             }
         }
+        jQuery('#problemsDropDown span.whichProblem').text(": " + problem);
+        jQuery('#versionsDropDown span.whichVersion').text("");
         for (var i = 0; i < ar.length; i++) {
             jQuery('#dropdownSwitchVersion').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar[i] + "\">" + ar[i] + "</a>");
         }
+        
     });
     // switch displayed code when version is selected
     jQuery('#dropdownSwitchVersion').on('click', "a.dropdown-item", function() {

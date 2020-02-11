@@ -18,12 +18,12 @@
             <div class="col-md-12">
                 <h1>Code Evo</h1>
                 <div class="dropdown" style="display: inline-flex;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="studentsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students</button>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="studentsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students <span class="whichStudent"></button>
                     <div class="dropdown-menu" id="dropdownSwitchStudent" aria-labelledby="dropdownMenuButton">
                     </div>
                 </div>
                 <div class="dropdown" style="display: inline-flex;">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="problemsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Problems</button>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="problemsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Problems <span class="whichProblem"></button>
                     <div class="dropdown-menu" id="dropdownSwitchProblem" aria-labelledby="dropdownMenuButton">
                     </div>
                 </div>
