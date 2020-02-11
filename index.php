@@ -39,7 +39,35 @@
             </div>
         </div>
         <div class="col-md-12">
-            <div id="program-code" style="width: 50%; height: 600px"></div>
+                <div class="row">
+                    <div id="program-code" style="width: 50%; height: 600px"></div>
+                    <div id="program-output" style="width: 50%; height: 600px"></div>
+                </div>
+        </div>
+        <div class ="col-md-12">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 3%">1</th>
+                        <th scope="col" style="width: 3%">2</th>
+                        <th scope="col" style="width: 3%">3</th>
+                        <th scope="col" style="width: 3%">4</th>
+                        <th scope="col" style="width: 3%">5</th>
+                        <th scope="col" style="width: 3%">6</th>
+                        <th scope="col" style="width: 3%">9</th>
+                        <th scope="col" style="width: 3%">8</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td><button class="btn" type="button" id="blabla">111</button></td>
+                        <td><button class="btn" type="button" id="blabla">11</button></td>
+                        <td><button class="btn" type="button" id="blabla">1</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </BODY>

@@ -40,6 +40,7 @@ jQuery(document).ready(function() {
             jQuery('#dropdownSwitchProblem').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar2[i] + "\">" + ar2[i] + "</a>");
         }
     });
+    // add versions to dropdown
     jQuery('#dropdownSwitchProblem').on('click', "a.dropdown-item", function() {
         jQuery("#dropdownSwitchProblem").children().removeClass('active');
         jQuery(this).addClass('active');
@@ -55,6 +56,7 @@ jQuery(document).ready(function() {
             jQuery('#dropdownSwitchVersion').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar[i] + "\">" + ar[i] + "</a>");
         }
     });
+    // switch displayed code when version is selected
     jQuery('#dropdownSwitchVersion').on('click', "a.dropdown-item", function() {
         jQuery("#dropdownSwitchVersion").children().removeClass('active');
         jQuery(this).addClass('active');
@@ -67,6 +69,7 @@ jQuery(document).ready(function() {
         });
         jQuery('#versionsDropDown span.whichVersion').text(version);
     });
+    // next and previous buttons
     jQuery('#next').on('click', function() {
         var version = jQuery('#dropdownSwitchVersion a.active');
         if (jQuery(version).next().length == 0) {
