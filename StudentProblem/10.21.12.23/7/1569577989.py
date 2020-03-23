@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n):
     d = 1
     liste = []
@@ -13,3 +14,8 @@ def divisors(n):
             d + 1
         else:
             d +1
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_7():
+    assert divisors(6) == [1,2,3,6]
+######################################################################

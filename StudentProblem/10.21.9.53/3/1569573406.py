@@ -21,3 +21,19 @@ def leap(year: int) -> str:
         return "Schaltjahr"
     
         
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap_a():
+    jahr = 1500
+    assert leap(jahr) == False
+def test_leap_b():
+    jahr = 2011
+    assert leap(jahr) == "Kein Schaltjahr"
+def test_leap_c():
+    jahr = 2000
+    assert leap(jahr) == "Schaltjahr"
+def test_leap_d():
+    jahr = -1
+    assert leap(jahr) == False
+######################################################################

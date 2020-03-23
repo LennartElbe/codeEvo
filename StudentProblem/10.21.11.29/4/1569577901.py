@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere:
     def __init__(self, s):
         if len(s) != 0:
@@ -36,3 +37,12 @@ class Vigenere:
             
             
         
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_Vigenere():
+    Schlüssl = Vigenere("AAAABBBB")
+    assert(Vigenere("AAAABBBB").encrypt() == "00001111")
+    assert(Vigenere("").enrypt() == "")
+    assert(Vigenere("0105".decrypt()) == "ABAF")
+    assert(Vigenere("".decrypt()) == "")
+######################################################################

@@ -11,3 +11,11 @@ def leap(x):
         return True
     print(1700 / 4)
     return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert(leap(2019)) == False
+    assert(leap(2004)) == True
+    assert(leap(1700)) == True
+######################################################################

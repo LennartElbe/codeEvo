@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x:int ,xs:list) -> list:
     """returns every number in xs wich is smaller than x
      args: int x
@@ -14,3 +15,9 @@ def list_filter(x:int ,xs:list) -> list:
         if x >= i:
             result.append(i)
     return result
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test():
+    assert list_filter(5,[1,1,3,5,9]) == [1,1,3,5]
+######################################################################

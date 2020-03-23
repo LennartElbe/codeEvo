@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Node(Node0):
     """Node and Leaf are subclasses of Node0 and Leaf0"""
     def __init__(self, left, right, mark, value = None):
@@ -56,3 +57,7 @@ class Leaf(Leaf0):
         
         
         
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

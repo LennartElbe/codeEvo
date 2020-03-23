@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 print("Hello World")
 
 def list_filter(x: int, xs: list) -> list:
@@ -30,3 +31,15 @@ def list_filter(x: int, xs: list) -> list:
     return xs_filt
 
 
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test_list_filter():
+    xs1 = [1, 0, 2, 3, -1, -5]
+    xs2 = [1, 5, 2, 3, 99, 2.5, 3.5]
+    assert list_filter(0, xs1) == [0, -1, -5], "Fall x=0"
+    assert list_filter(-2, xs1) == [-5], "Fall x=-2"
+    assert list_filter(0, xs2) == [], "Fall: Bedingung fuer kein Element erfuellt"
+    assert list_filter(3, xs2) == [1, 2, 3, 2.5], "Fall: reele Zahl groesser x enthalten"
+    
+######################################################################

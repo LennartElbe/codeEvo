@@ -13,3 +13,12 @@ def leap(n: int) -> bool:
     elif n % 100 == 0 and n % 400 != 0:
         return False
       
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    """this function tests leap()"""
+    assert leap(2000) == True
+    assert leap(2001) == False
+
+######################################################################

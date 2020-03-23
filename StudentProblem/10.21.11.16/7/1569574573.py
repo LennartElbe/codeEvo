@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     for i, j in range(n+1):
         if i % divisors(n-1) == 0:
@@ -11,3 +12,7 @@ def divisors(n: int) -> list:
             
 
 
+######################################################################
+## Lösung Teil 2. (Tests)
+print(divisors(20))
+######################################################################

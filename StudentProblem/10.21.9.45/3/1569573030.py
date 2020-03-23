@@ -16,3 +16,11 @@ def leap(year: int) -> bool:
             return False
     else:
         return "Get your calender straight"
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def leap_test(year):
+    assert leap(2000) == False
+    assert leap(1196) == "Get your calender straight"
+    assert leap(1996) == True
+######################################################################

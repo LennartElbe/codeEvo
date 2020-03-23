@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0):
     """An underclass of Leaf0 representing leaves in a tree."""
     def __init__(self, value):
@@ -97,3 +98,9 @@ class Node(Node0):
                    postorder(self.right),
                    postorder(self.value))
         
+######################################################################
+## Lösung Teil 2.
+def test_postorder():
+    assert Node (Leaf(1), Leaf(2), 3).postorder() == [1, 2, 3]
+    assert Node (Leaf(1), Leaf(2)).postorder() == [1,2]
+######################################################################

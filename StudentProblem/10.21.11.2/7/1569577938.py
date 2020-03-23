@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n:  int) -> list:
     """ Funktion nimmt ganze Zahl n als Argument 
     und liefert die Liste aller ihrer Teiler ohne Wiederholung zurück.
@@ -24,3 +25,10 @@ def divisors(n:  int) -> list:
     
     
 #notes brauche schleife
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(0) == []
+    assert divisors(1) == [1]
+    assert divisors(8) == [1,2,4,8]
+######################################################################

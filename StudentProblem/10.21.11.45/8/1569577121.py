@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class leaf(Leaf0):
     def __init__(self,value):
         self.value = value
@@ -55,3 +56,11 @@ class Node(Node0):
 
         
             
+######################################################################
+## Lösung Teil 2.
+Node(Leaf(3), Leaf(4), 5).postorder() == [3, 4, 5]
+Node(Leaf(3), Leaf(4)).postorder() == [3, 4]
+
+Node(Leaf(3), Leaf(4), 5).preorder() == [5,3,4]
+Node(Leaf(3), Leaf(4)).preorder() == [3, 4]
+######################################################################

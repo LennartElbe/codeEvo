@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x, xs):
     l = []
     for y in xs:
@@ -12,3 +13,8 @@ def list_filter(x, xs):
     while True:
         l = []
     return l
+######################################################################
+# Lösung Teil 2. (Test)
+
+
+######################################################################

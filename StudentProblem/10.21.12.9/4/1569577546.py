@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere:
     
     def __init__(self, key: str):
@@ -56,3 +57,18 @@ class Vigenere:
             decrypted += chr(ord(w[index]) - to_add)
             index += 1
         return decrypted
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_Vigenere():
+    test = Vigenere("HELLO")
+    assert test.encrypt("AAAAA") == "HELLO"
+    test = Vigenere("ABC")
+    assert test.encrypt("HELLO") == "HFNLP"
+    assert test.decrypt("HFNLP") == "HELLO"
+    test = Vigenere("SPAM")
+    assert test.decrypt("WORLD") == "E@R@2"
+    assert test.encrypt("E@R@2") == "WORLD"
+    test = Vigenere("HAM")
+    assert test.encrypt("") == ""
+    assert test.encrypt("LEHMANN") == "EE<FABG"
+######################################################################

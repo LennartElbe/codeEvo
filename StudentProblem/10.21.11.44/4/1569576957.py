@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 # Klartext = ICHBINEINGEIST
 # Schlüssel = ABC
 
@@ -14,3 +15,7 @@ class Vigenere:
         pass
     def enencrypt(w, s):
         pass
+######################################################################
+## Lösung Teil 3. (Tests)
+
+######################################################################

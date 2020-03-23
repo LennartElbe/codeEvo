@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0, Node0):
     """A lower-class leaf of class Leaf0"""
     def __init__(self, value):
@@ -85,3 +86,7 @@ class Node(Node0):                      # Vererbung
             preorder(tree.left)
             preorder(tree.right)
             print(tree.value)
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

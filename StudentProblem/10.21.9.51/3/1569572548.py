@@ -9,3 +9,9 @@ def schaltjahr(jahr: int):
         return True
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_schaltjahr():
+    assert(schaltjahr(1582)) == True
+######################################################################

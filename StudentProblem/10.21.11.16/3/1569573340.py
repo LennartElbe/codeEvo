@@ -12,3 +12,14 @@ def leap(j: int) -> bool:
 
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+print(leap(2000))
+print(leap(1660))
+print(leap(1783))
+print(leap(1800))
+print(leap(1600))
+print(leap(1900))
+print(leap(1996))
+######################################################################

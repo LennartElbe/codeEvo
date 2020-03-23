@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     return_list = []
     for i in range(1, n+1):
@@ -12,3 +13,10 @@ def divisors(n: int) -> list:
         else:
             pass
     return return_list
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(6) == [1,2,3,6]
+    assert divisors(10) == [1,2,5,10]
+    assert divisors(0) == []
+######################################################################

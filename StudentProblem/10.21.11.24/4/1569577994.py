@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere():
     """"""
     def __init__(self, key):
@@ -34,3 +35,7 @@ class Vigenere():
 c = Vigenere("A")
 print(c.encrypt())
     
+######################################################################
+## Lösung Teil 3. (Tests)
+
+######################################################################

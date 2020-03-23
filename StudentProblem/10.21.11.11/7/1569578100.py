@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """
     Args:
@@ -19,3 +20,9 @@ def divisors(n: int) -> list:
             if n % d == 0:
                 div_list += [d]
     return div_list
+######################################################################
+## Lösung Teil 2. (Tests)
+def div_test():
+    assert divisors(0) == [], print("test")
+    assert divisors(5) == [1, 5]
+######################################################################

@@ -13,3 +13,10 @@ def leap(year: int) -> bool:
         return True
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1900) == True
+    assert leap(2000) == True
+######################################################################

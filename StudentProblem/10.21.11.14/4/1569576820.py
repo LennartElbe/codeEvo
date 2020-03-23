@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere(keyword):
     """Class Vigenere
     """
@@ -21,3 +22,11 @@ class Vigenere(keyword):
         
         
     
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_enc():
+    assert encrypt(Hello) == pass
+    
+def test_dec():
+    assert decrypt() == pass
+######################################################################

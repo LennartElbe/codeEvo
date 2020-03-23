@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s):
     sep = True
     n = 0
@@ -23,6 +24,7 @@ print(nwords("dgja n"))
 print(nwords("dg   ja n"))
 print(nwords("   jg   ja n   "))
 
+## Lösung Teil 2.
 def word_count_iter(it):
     nz = 0
     nw = 0
@@ -34,3 +36,15 @@ def word_count_iter(it):
     return nz, nw, nc
 
 print(word_count_iter(["dg   ja n", "dg   ja n  "]))
+######################################################################
+## Lösung Teil 3. (Tests)
+
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

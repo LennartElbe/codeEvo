@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     "die eine positive ganze Zahl n als Argument nimmt 
     und die Liste aller ihrer Teiler ohne Wiederholung zurückliefert.
@@ -14,3 +15,7 @@ def divisors(n: int) -> list:
 def test_divisors():
     assert divisors(3) == [3]
     assert divisors(9) == [3,9]
+######################################################################
+## Lösung Teil 2. (Tests)
+
+######################################################################

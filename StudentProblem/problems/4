@@ -1,4 +1,3 @@
-## hidden tests
 pytest.main (["-v", "--assert=plain", "-p", "no:cacheprovider"])
 from inspect import getfullargspec
 mysumargs = getfullargspec(mysum).args

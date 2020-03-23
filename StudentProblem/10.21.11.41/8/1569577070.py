@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf:
     def __init__(self, value):
         self.value = value
@@ -48,3 +49,9 @@ class Node:
             return list(self.left.postorder(), self.right.postorder(), self.value)
           
                
+######################################################################
+## Lösung Teil 2.
+def post_pre_order_test():
+    assert(Node(Leaf(1), Leaf(2), 3).postorder()) == [1, 2, 3]
+    assert(Node(Leaf(1), Leaf(2)).preorder()) == [1, 2]
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s):
     L = list(s)
     H = []
@@ -18,6 +19,7 @@ def nwords(s):
             i = 0
     return n
 
+## Lösung Teil 2.
 def test_nwords():
     assert(nwords("Ha Ho H") == 2)
     assert(nwords("HALLOHALLOHALLO") == 1)
@@ -25,3 +27,15 @@ def test_nwords():
     assert(nwords("H H H H") == 0)
     
 
+######################################################################
+## Lösung Teil 3. (Tests)
+
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x: int, xs: list) ->
     """alle elemente <= x als liste zurück geben"""
     res =[]
@@ -13,3 +14,8 @@ def list_filter(x: int, xs: list) ->
         else:
             continue
     return res
+######################################################################
+# Lösung Teil 2. (Test)
+
+
+######################################################################

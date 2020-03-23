@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n)->list:
     teiler = [n]
     if n <= 0:
@@ -15,3 +16,11 @@ def divisors(n)->list:
     return teiler
 
         
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(1) == [1]
+    assert divisors(5) == [5, 1]
+    assert divisors(10) == [10, 1, 2, 5]
+    assert divisors(0)=="Ungültige Eingabe"
+######################################################################

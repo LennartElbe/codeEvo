@@ -21,3 +21,12 @@ def leap(x: int):
             return True
         else:
             return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    """Tests the fucniton leap."""
+    assert leap(1900) == False
+    assert leap(1901) == False
+    assert leap(2004) == True
+######################################################################

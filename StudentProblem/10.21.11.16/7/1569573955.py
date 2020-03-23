@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     start_lst = [range(n+1)]
     teiler = []
@@ -12,3 +13,7 @@ def divisors(n: int) -> list:
             teiler.append(k)
     return teiler
         
+######################################################################
+## Lösung Teil 2. (Tests)
+print(divisors(20))
+######################################################################

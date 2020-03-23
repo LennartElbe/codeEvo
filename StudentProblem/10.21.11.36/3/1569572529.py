@@ -25,3 +25,13 @@ def leap(n: int) -> bool:
     
    
                 
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    y1, y2, y3, y4 = 1997, 2004, 1900, 2000
+    assert leap(y1) == False
+    assert leap(y2) == True
+    assert leap(y3) == False
+    assert leap(y4) == True
+######################################################################

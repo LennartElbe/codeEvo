@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere:
     def __init__(self , key):
         if key is not None:
@@ -38,3 +39,12 @@ class Vigenere:
             a = a - 65
             w[i] = l[a]
             k = k + 1
+######################################################################
+## Lösung Teil 3. (Tests)
+
+
+
+
+
+
+######################################################################

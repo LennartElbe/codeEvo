@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """Compute the divisors of a given number and return them as a list.
     Args:
@@ -20,3 +21,12 @@ def divisors(n: int) -> list:
             divs.append(i)
     return divs
 
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    n1, n2, n3 = 1, 13, 20
+    assert divisors(n1) == [1]
+    assert divisors(n2) == [13, 1]
+    assert divisors(n3) == [20, 1, 2, 4, 5, 10]
+
+######################################################################

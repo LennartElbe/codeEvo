@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x, xs):
     """returns a list from the numbers in the list, wich smaller or the same as x"""
     result = []
@@ -14,3 +15,10 @@ def list_filter(x, xs):
             i.append(result)
         return result
             
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test():
+    """tested the funtion list_filter"""
+    assert list_filter(2 ,[0,1,2,5,8])
+######################################################################

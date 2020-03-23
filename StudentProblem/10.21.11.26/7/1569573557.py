@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int):
     """Calculates all divisors of n with rest zero
     
@@ -18,3 +19,9 @@ def divisors(n: int):
             if n % i == 0:
                 lst += [i]
         return lst
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert(divisors(6) == [1,2,3,6])
+    assert(divisors(20) == [1,2,4,5,10, 20])
+######################################################################

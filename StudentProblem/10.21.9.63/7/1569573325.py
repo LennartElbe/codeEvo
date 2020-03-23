@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     res = []
     if n < 0:
@@ -12,3 +13,9 @@ def divisors(n: int) -> list:
         if n // d == 0:
             res += [d]
     return res
+######################################################################
+## Lösung Teil 2. (Tests)
+divisors(10)
+divisors(7)
+divisors(12)
+######################################################################

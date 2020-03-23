@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisior(n: int) -> list:
     """Eine Funktion, die alle Dividenten einer positiven,
     ganzen Zahl in einer Liste wiedergibt
@@ -16,3 +17,11 @@ def divisior(n: int) -> list:
         else:
             return j
     
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisor():
+    assert divisor(6) == ["1","2","3","6"]
+    assert divisor(3) == ["3"]
+    assert divisor(-3) == ["3"]
+    assert divisor(0) == ["0"]
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 # HHHHH
 # WORLD
 
@@ -47,3 +48,8 @@ class Vigenere:
         
     def decrypt(self, w):
         pass
+######################################################################
+## Lösung Teil 3. (Tests)
+print(ord("h") - 97 % 26)
+
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n):
     """
     Args: n
@@ -22,3 +23,10 @@ def divisors(n):
         if n % i == 0:
             H.append(i)  
     return H
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert(divisors(4) == [1,2])
+    assert(divisors(0) == [])
+    assert(divisors(5) == [1])
+######################################################################

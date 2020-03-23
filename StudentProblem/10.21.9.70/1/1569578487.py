@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 
 def nwords():
     """
@@ -22,6 +23,7 @@ def nwords():
     for char in s:
         if char not in string.whitespace:
             counter"""
+## Lösung Teil 2.
 def  word_count_iter(iterable):
     """
      Funktion word_count_iter, die ein iterierbares Argument nimmt,
@@ -49,3 +51,22 @@ def  word_count_iter(iterable):
     return (num_lines, num_words, num_chars)
         
   
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count_iter():
+    text1 = [["abc a b c"], [], ["a", "a"]]
+    a = (n 
+         for lines in text1 
+         for n in lines
+        )
+    assert word_count_iter(a) == (2, 6, 8)
+
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

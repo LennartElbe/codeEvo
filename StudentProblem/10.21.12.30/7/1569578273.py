@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """" Berechnung der Menge von Teilern einer positiven nganzen Zahl 
     """"
@@ -16,3 +17,8 @@ def divisors(n: int) -> list:
         if n % d == 0:
             return list_d.append(d)
         
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(4) == [1, 2, 4]
+######################################################################

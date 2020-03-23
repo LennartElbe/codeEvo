@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0):
     def __init__(self, value):
         super().__init__(value)
@@ -45,3 +46,9 @@ class Node(Node0):
             res += [self.value]
         return res
         
+######################################################################
+## Lösung Teil 2.
+def test_node():
+    n = Node((Leaf(1), Leaf(2), 3))
+    n.perorder() == [3, 1, 2]
+######################################################################

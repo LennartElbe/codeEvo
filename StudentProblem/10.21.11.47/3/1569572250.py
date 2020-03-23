@@ -11,3 +11,10 @@ def leap(year:int) -> bool:
         return false
     else:
         return false
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def leap_test():
+    assert leap(2012) == true
+    assert leap(1582) == false
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def primelist(n)->list:
     """return a list of prime numbers"""
     ls=[]
@@ -29,3 +30,7 @@ def divisors(n:int)->list:
             
         
         
+######################################################################
+## Lösung Teil 2. (Tests)
+
+######################################################################

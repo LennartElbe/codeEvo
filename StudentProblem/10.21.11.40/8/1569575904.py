@@ -15,6 +15,62 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf:
     def preorder(self):
         pass
+######################################################################
+## Lösung Teil 2.
+def test_tree():
+    #assert Leaf.preorder
+    #assert Node (Leaf(1), Leaf(2), 3).postorder() == [1, 2, 3]
+    pass
+
+
+"""
+def Leaf(Leaf0):
+    def __init__(self, *args):
+        super().__init__(*args)
+        
+    def preorder(self) -> list:
+        """
+        Returns a list of the leaf in preorder without any None values.
+        """
+        return [self.value]
+    
+    def postorder(self) -> list:
+        """
+        Returns a list of the leaf in postorder without any None values.
+        """
+        return [self.value]
+
+class Node(Node0):
+    def __init__(self, *args):
+        super().__init__(*args)
+
+    def preorder(self) -> list:
+        """
+        Returns a list of the node in preorder without any None values.
+        """
+        ls = []
+        if self.value:
+            ls.append(self.value)
+        if self.left:
+            ls += self.left.preorder()
+        if self.right:
+            ls += self.right.preorder()
+        return ls
+    
+    def postorder(self) -> list:
+        """
+        Returns a list of the node in postorder without any None values.
+        """
+        ls = []
+        if self.left:
+            ls += self.left.preorder()
+        if self.right:
+            ls += self.right.preorder()
+        if self.value:
+            ls.append(self.value)
+        return ls"""
+######################################################################

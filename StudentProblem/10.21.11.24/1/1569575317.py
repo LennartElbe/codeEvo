@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str) -> int:
     """Berechnet die Anzahl der Worte in s
     Arg: s: str
@@ -22,6 +23,7 @@ def nwords(s: str) -> int:
     return counter
 
         
+## Lösung Teil 2.
 def word_count_iter(i: iter) -> tuple:
     """Nimmt ein iterierbares Objekt aus Strings
        und gibt Tupel aus Zeilen, words und zeichen zurück
@@ -37,3 +39,19 @@ def word_count_iter(i: iter) -> tuple:
         for z in l:
             zeichen = zeichen + 1
     return (lines, words, zeichen)
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count_iter():
+    test = []
+    assert word_count_iter(test) == (0, 0, 0)
+    test = ["h i", "k z u"]
+    assert word_count_iter(test) == (2, 5, 8)
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

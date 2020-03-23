@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere():
     """
     """
@@ -52,3 +53,8 @@ class Vigenere():
             temp.append(ch)
         return temp
         
+######################################################################
+## Lösung Teil 3. (Tests)
+def vigenere_test():
+    vig = Vigenere("")
+######################################################################

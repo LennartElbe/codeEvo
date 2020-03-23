@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere:
     """Represents the Vigenere Verschlüsselung
     Atrributes:
@@ -35,3 +36,7 @@ class Vigenere:
             args: w: string word which gets encrypted
         """
         pass
+######################################################################
+## Lösung Teil 3. (Tests)
+
+######################################################################

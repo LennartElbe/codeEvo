@@ -13,3 +13,9 @@ def leap (x:int)->bool:
                 return true
         return false
     return true
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test():
+    assert leap (1500) == false
+######################################################################

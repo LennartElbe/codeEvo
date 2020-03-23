@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(x: int) -> list:
     divisors_list = []
     i = 1
@@ -18,3 +19,10 @@ def divisors(x: int) -> list:
     return divisors_list
 
 print(divisors(0))
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(4) == [1, 2, 4]
+    assert divisors(0) == []
+    assert divisors(12) == [1, 2, 3, 4, 6, 12]
+######################################################################

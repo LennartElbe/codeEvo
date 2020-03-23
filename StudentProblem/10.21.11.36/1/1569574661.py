@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str) -> int:
     """Count the number of words in a given string. Words are separated by at least one char in string.whitespace
     Args:
@@ -28,6 +29,7 @@ def nwords(s: str) -> int:
         words.append(current_word)
     return len(words)
 
+## Lösung Teil 2.
 def word_count_iter(it) -> tuple:
     """Takes an iterable that yields a str in every iteration and returns a tuple
     with the number of lines, words and characters
@@ -44,3 +46,17 @@ def word_count_iter(it) -> tuple:
     return lines, words, chars
         
     
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count_iter():
+    iter1 = ["Hello, World", "Hallo, Welt"]
+    assert word_count_iter(iter1) == (2, 4, 23)
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

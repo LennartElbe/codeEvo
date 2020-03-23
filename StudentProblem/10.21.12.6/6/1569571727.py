@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x: int, xs: list) -> list:
     """Function to filter elements of a list.
     
@@ -19,3 +20,8 @@ def list_filter(x: int, xs: list) -> list:
         if i <= x:
             res.append(x)
     return res
+######################################################################
+# Lösung Teil 2. (Test)
+
+
+######################################################################

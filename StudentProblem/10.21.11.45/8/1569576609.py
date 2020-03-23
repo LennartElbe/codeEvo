@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class leaf(Leaf0):
     def __init__(self,value):
         self.value = value
@@ -55,3 +56,7 @@ class Node(Node0):
 
         
             
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

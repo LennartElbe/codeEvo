@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf:
     def __init__(self, value):
         super().__init__(self, value)
@@ -32,3 +33,7 @@ class Leaf:
                 preorder(node.left) # left fist
                 preorder(node.right) # second third
                 return node.value # mark third
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

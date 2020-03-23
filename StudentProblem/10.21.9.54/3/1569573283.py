@@ -15,3 +15,12 @@ def leap(n: int)->str:
         else:
             return("kein Schaltjahr")
             
+######################################################################
+## Lösung Teil 2 (Tests)
+
+assert leap(2012) == "Schaltjahr"
+assert leap(1) == "Falsche Eingabe"
+assert leap(2011) == "kein Schaltjahr"
+assert leap(2000) == "Schaltjahr"
+assert leap(1900) == "kein Schaltjahr"
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """Function to return every divisor of n
     
@@ -22,3 +23,13 @@ def divisors(n: int) -> list:
         else:
             d += 1
     return res
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_norm():
+    assert divisors(10) == [1, 2, 5, 10]
+
+def test_one():
+    assert divisors(1) == [1]
+
+
+######################################################################

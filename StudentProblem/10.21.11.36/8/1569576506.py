@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 # Pre-Order (Hauptreihenfolge): Zuerst der Knoten selbst,dann der linke, danach der rechte Teilbaum
 # Post-Order (Nebenreihenfolge): Zuerst der linke, danachder rechte Teilbaum, zum Schluss der Knoten selbst
 
@@ -80,3 +81,7 @@ print(Node (Leaf(1), Leaf(2)).preorder())
 print(Node (Leaf(1), Leaf(2), 3).preorder())
 print(Node (Leaf(1), Leaf(2)).postorder())
 print(Node (Leaf(1), Leaf(2), 3).postorder())
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n:int) -> list:
     """
     Returns a list of all divisors of n.
@@ -19,3 +20,9 @@ def divisors(n:int) -> list:
         if n % d == 0:
             divisors.insert(d)
     return divisors
+######################################################################
+## Lösung Teil 2. (Tests)
+def divisors_test():
+    assert divisors(4) == [1, 2, 4]
+    assert divisors(1) == [1]
+######################################################################

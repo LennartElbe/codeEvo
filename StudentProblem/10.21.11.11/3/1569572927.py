@@ -9,3 +9,9 @@ def leap(year: int) -> str:
         print("oh no")
     elif year % 4 == 0 and year % 100 == 0 and year % 400 != 0:
         print(year,"is leapyear")
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1582) == 'oh no'
+######################################################################

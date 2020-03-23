@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords_helper(s: str) -> int:
     count = 0
     while s[count] not in string.whitespace and count <= (len(s) - 2):
@@ -25,4 +26,17 @@ def nwords(s: str) -> int:
 
 print(nwords("habba bubba"))
 print(nwords("a a a a a"))
+## Lösung Teil 2.
 
+######################################################################
+## Lösung Teil 3. (Tests)
+
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

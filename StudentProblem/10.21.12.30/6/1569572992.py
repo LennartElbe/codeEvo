@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x: int, xs: lst) -> lst:
     """ Funktion, die alle Elemente einer Liste
         ausgibt, die kleiner x sind.
@@ -21,3 +22,15 @@ def list_filter(x: int, xs: lst) -> lst:
         else:
             return xs_filt
         
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test_xs_filt():
+    xs1 = [1, 0, 2, 3, -1, -5]
+    xs2 = [1, 5, 2, 3, 99, 2.5, 3.5]
+    assert xs_filt(0, xs1) == [0, -1, -5]
+    assert xs_filt(-2, xs1) == [-5]
+    assert xs_filt(0, xs2) == []
+    assert xs_filt(3, xs2) == [1, 2, 3, 2.5]
+    
+######################################################################

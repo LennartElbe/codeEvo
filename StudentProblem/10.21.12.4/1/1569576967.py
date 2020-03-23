@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str)-> int:
     """
     Die Funktion nwords berechenet zu einem String Argument s die Anzahl der Worte im String.
@@ -21,6 +22,7 @@ def nwords(s: str)-> int:
         if element == (" "):
             result += 1
     return result
+## Lösung Teil 2.
 def word_count_iter(m):
     """
     Die Funktion word_count_iter
@@ -40,3 +42,29 @@ def word_count_iter(m):
     
 
         
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count():
+    assert word_count_iter("Hallo") == (1,1,5)
+    assert word_count_iter("Hallo world") == (2,2,11)
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+def word_count(f):
+    zeilen = 0
+    worte = 0
+    zeichen = 0
+    with open(f, r) as test:
+        for line in test:
+            lines += 0
+            worte += nwords(line)
+            for letter in line:
+                zeichen += 1
+                
+            
+    return (zeilen,worte,zeichen)
+######################################################################

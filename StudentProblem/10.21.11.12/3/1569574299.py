@@ -16,3 +16,10 @@ def leap(x: int) -> str:
     else:
         return print("x ist kein Schaltjahr")
             
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1400) == "1400 ist kein Schaltjahr"
+    assert leap(2020) == "2020 ist ein Schaltjahr"
+######################################################################

@@ -38,3 +38,9 @@ False
 Falsche Eingabe, keine Jahreszahl!
 False
 """
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(2004) == "2004 ist ein Schaltjahr" True
+######################################################################

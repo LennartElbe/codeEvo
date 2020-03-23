@@ -10,3 +10,11 @@ def leap(x):
         return True
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test():
+    """tested leap funktion"""
+    assert leap(2000)
+    assert leap(2001)
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x,[xs]) -> int:
     Liste = []
     if x or xs = None:
@@ -15,3 +16,9 @@ def list_filter(x,[xs]) -> int:
                 Liste.append(xs)
             
             
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test_3():
+    assert(3,[1,2,3,4,5])
+######################################################################

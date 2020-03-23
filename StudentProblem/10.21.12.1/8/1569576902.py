@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0):
     def __init__(self, value):
         self. value = value
@@ -37,3 +38,7 @@ class Node(Node0):
             
 def test():
     assert  Node (Leaf(1), Leaf(2), 3).postorder() == [1, 2, 3]
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

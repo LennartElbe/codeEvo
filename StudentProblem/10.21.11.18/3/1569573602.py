@@ -16,3 +16,15 @@ def leap(year) -> int:
         print("Kein Schaltjahr")
         
  
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap1(year) -> int:
+    assert leap(year) == 1581
+    
+def test_leap2(year) -> int:
+    assert leap(year) == 1900 
+ 
+
+    
+######################################################################

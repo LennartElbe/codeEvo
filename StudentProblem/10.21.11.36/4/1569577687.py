@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 # HHHHH
 # WORLD
 class VigenereException(Exception):
@@ -30,3 +31,9 @@ class Vigenere:
         
         
     def decrypt(self, w)
+######################################################################
+## Lösung Teil 3. (Tests)
+h = 2
+s = 5
+print(h // s + h %s)
+######################################################################

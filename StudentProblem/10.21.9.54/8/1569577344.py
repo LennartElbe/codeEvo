@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Node:
     """Subclass to the class Node0"""
     def __init__(self, mark, **kwargs):
@@ -44,3 +45,13 @@ class Leaf:
         
             
         
+######################################################################
+## Lösung Teil 2.
+assert postorder( Node (Leaf(1), Leaf(2), 3)) == [1,2,3]
+assert postorder(Node (Leaf(1), Leaf(2)) == [1,2]
+assert preorder(Node(Leaf(1), Leaf(2),3)) == [3,1,2]
+assert preorder(Node (Leaf(1), Leaf(2))== [1,2]
+assert preorder()== None     
+assert postorder() == None
+assert postorder(Node (Leaf(1), Leaf(2))== preorder(Node (Leaf(1), Leaf(2))
+######################################################################

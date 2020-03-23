@@ -17,3 +17,12 @@ def leap(jahreszahl: int) -> bool:
         return True
     elif (jahreszahl % 100 == 0) and (jahreszahl % 400 != 0) and (jahreszahl > 1582):
         return False 
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    """test the function leap"""
+    assert(leap(2016)) == True
+    assert(leap(1500)) == False
+    assert(leap(2000)) == False
+######################################################################

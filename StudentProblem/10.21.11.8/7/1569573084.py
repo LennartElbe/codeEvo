@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """Returns a list of all divisors(without a rest) of a given number.
     Args:
@@ -22,3 +23,8 @@ def divisors(n: int) -> list:
                 res.append(x)
             else:
                 break
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(20) == [1, 2, 4, 5, 10]
+######################################################################

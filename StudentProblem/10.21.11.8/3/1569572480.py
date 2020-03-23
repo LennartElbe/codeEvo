@@ -19,3 +19,10 @@ def leap(x: int):
             return True
         elif x%100 == 0 and x%400 != 0:
             return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1900) == True
+    assert leap(1901) == False
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n)->list:
     teiler = []
     if n < 0:
@@ -15,3 +16,7 @@ def divisors(n)->list:
         return teiler
 
         
+######################################################################
+## Lösung Teil 2. (Tests)
+
+######################################################################

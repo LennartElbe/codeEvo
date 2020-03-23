@@ -10,3 +10,10 @@ def leap(x):
     elif (x % 100 == 0) and (not(x % 400 == 0)):
         return True
     return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert(leap(2019)) == False
+    assert(leap(2004)) == True
+######################################################################

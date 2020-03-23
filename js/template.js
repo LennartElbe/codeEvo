@@ -1,6 +1,7 @@
 var editor;
+var diffeditors;
 var _data;
-
+// fills in dropdowns, swap displayed code, implementation of next and previous buttons
 jQuery(document).ready(function() {
     console.log("hi the js is ready!");
     editor = ace.edit("program-code");
@@ -60,10 +61,10 @@ jQuery(document).ready(function() {
         for (var i = 0; i < ar.length; i++) {
             jQuery('#dropdownSwitchVersion').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar[i] + "\">" + ar[i] + "</a>");
         }
-        
     });
     // switch displayed code when version is selected
     jQuery('#dropdownSwitchVersion').on('click', "a.dropdown-item", function() {
+        // jQuery("#righteditorlabel").setVal("#a.dropdown-item".text()); // change the button's text to the name of the active button in the dropdown
         jQuery("#dropdownSwitchVersion").children().removeClass('active');
         jQuery(this).addClass('active');
         var version = jQuery(this).text();
@@ -72,6 +73,12 @@ jQuery(document).ready(function() {
         var path = ["StudentProblem", student, problem, version].join('/');
         jQuery.get(path, function(data) {
             editor.setValue(data);
+            diffeditors = differ.getEditors();
+            var oldvalue = diffeditors.left.getValue();
+            diffeditors.right.setValue(oldvalue);
+            diffeditors.left.setValue(data); // THIS IS HOW U DO IT
+            diffeditors.left.clearSelection();
+            diffeditors.right.clearSelection();
         });
         jQuery('#versionsDropDown span.whichVersion').text(version);
     });
@@ -95,5 +102,14 @@ jQuery(document).ready(function() {
         jQuery(version).removeClass('active');
         jQuery(version).prev().addClass('active');
         jQuery(version).prev().trigger('click');
+    });
+    var differ = new AceDiff({
+        element: '.acediff',
+        left: {
+            content: 'your first file content here',
+        },
+        right: {
+            content: 'your second file content here',
+        },
     });
 })

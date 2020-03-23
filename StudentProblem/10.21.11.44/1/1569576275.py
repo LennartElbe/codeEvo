@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str) -> int:
     """Counts the numbers of words and returns it of a given string s"""
     b = 0
@@ -20,9 +21,22 @@ def nwords(s: str) -> int:
             
             
             
+## Lösung Teil 2.
 def test_nwords():
     assert nwords("Mein Name ist Jan") == 4 #normal
     assert nwords("Mein Name istJan") == 3 #normal
     assert nwords("Hallo") == 1 #single word
     assert nwords(" ") == 0 # missing wird only withe space
     
+######################################################################
+## Lösung Teil 3. (Tests)
+
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

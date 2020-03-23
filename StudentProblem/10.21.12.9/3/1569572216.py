@@ -14,3 +14,11 @@ def leap(jear: int) -> bool:
             return True
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1999) == False
+    assert leap(2001) == True
+    assert leap(1000) == False
+######################################################################

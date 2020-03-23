@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     res = []
     for i in range(n):
@@ -12,3 +13,7 @@ def divisors(n: int) -> list:
     return res
 
 print(divisors(100))
+######################################################################
+## Lösung Teil 2. (Tests)
+
+######################################################################

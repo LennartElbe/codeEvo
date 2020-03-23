@@ -14,3 +14,10 @@ def leap(jahrzahl: int) -> bool:
             return False
     else:
         print('jahrzahl ist kleiner als 1582')
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1550) == 'jahrzahl ist kleiner als 1582'
+    assert leap(2000) == False 
+######################################################################

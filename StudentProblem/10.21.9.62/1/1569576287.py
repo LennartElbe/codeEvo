@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str):
     """Zählt die Anzahl an Wörter von Argument s
     Args:
@@ -16,6 +17,7 @@ def nwords(s: str):
         elif x is " ":
             words += [one_word]
     return len(words)
+## Lösung Teil 2.
 def word_count_iter(s: str):
     start = 1
     signs = 0
@@ -26,3 +28,16 @@ def word_count_iter(s: str):
 
 s = "Hallo World"
 print(word_count_iter(s))
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count_iter():
+    assert
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+
+######################################################################

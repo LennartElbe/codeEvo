@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x,list([xs])):
     Liste = []
     n = 0
@@ -21,3 +22,9 @@ def list_filter(x,list([xs])):
                 
             
             
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test_3():
+    assert list_filter(3,[0,1,2,3,4,5]) == [0,1,2]
+######################################################################

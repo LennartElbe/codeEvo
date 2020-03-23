@@ -16,3 +16,12 @@ def leap(year: int) -> bool:
             return True
         if year % 100 == 0 and year % 400 != 0:
             return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    leap(2000) == True
+    leap(1900) == False
+    leap(1997) == False
+    leap(1996) == True
+######################################################################

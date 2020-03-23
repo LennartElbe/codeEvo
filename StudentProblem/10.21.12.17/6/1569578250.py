@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(xs: list, x: int) -> list:
     """Creates a new list out of a list with only items smaller
     or equal to x.
@@ -25,3 +26,11 @@ def list_filter(xs: list, x: int) -> list:
 print(list_filter([3, 2, 7], 4) == [3, 2])
 print(list_filter([1, 2, 3], 5)
 print(list_filter([4], 4))
+######################################################################
+# Lösung Teil 2. (Test)
+
+def test_list_filter():
+    assert list_filter([3, 2, 7], 4) == [3, 2]
+    assert list_filter([1, 2, 3], 5) == []
+    assert list_filter([4], 4) == [4]
+######################################################################

@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n, d):
     result = []
     if n <= 0:
@@ -14,3 +15,7 @@ def divisors(n, d):
         else:
             for i in d:
                 
+######################################################################
+## Lösung Teil 2. (Tests)
+
+######################################################################

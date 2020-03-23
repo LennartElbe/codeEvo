@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def nwords(s: str):
     """Zählt die Anzahl an Wörter von Argument s
     Args:
@@ -16,6 +17,7 @@ def nwords(s: str):
         elif x is " ":
             words += [one_word]
     return len(words)
+## Lösung Teil 2.
 def word_count_iter(s: str):
     """bei jeder Iteration eine Zeile (einen String) liefert, 
     und als Ergebnis ein Tupel aus der Anzahl der Zeilen,
@@ -30,3 +32,20 @@ def word_count_iter(s: str):
             signs += 1
     yield tuple(start, nwords(x), signs, x)
 
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_word_count_iter():
+    assert word_count_iter("") == (1, 0, 0, "")
+## revert
+try:
+    word_count_iter = word_count_iter.__wrapped__
+except:
+    pass
+
+## Lösung Teil 4.
+def word_count(f):
+    with open file(f) as datei:
+        for x in datei:
+            word_count_iter(x)
+            
+######################################################################

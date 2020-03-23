@@ -25,3 +25,13 @@ def leap(x:int) -> bool:
         
     else:
         return False
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    """ Test function for leap
+    """
+    assert leap(1581) == False
+    assert leap(1600) == True
+    assert leap(1800) == False
+######################################################################

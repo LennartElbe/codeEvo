@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     """Gibt alle Divisoren einer zahl zurück
     Arg: n: int > 0
@@ -18,3 +19,8 @@ def divisors(n: int) -> list:
             if n % i == 0:
                 returnlist.append(i)
         return returnlist
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(-2) == []
+######################################################################

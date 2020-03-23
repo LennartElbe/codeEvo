@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+# Lösung Teil 1.
 def list_filter(x: int, xs: list) -> list:
     """Function to filter elements of a list.
     
@@ -22,3 +23,8 @@ def list_filter(x: int, xs: list) -> list:
 
 testlist = [1, 2, 3, 4, 5, 6]
 list_filter(3, testlist)
+######################################################################
+# Lösung Teil 2. (Test)
+
+
+######################################################################

@@ -17,3 +17,11 @@ def leap(n:int)->bool:
         
 
 
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(2000)==True
+    assert leap(1996)==True
+    assert leap(1582)==please enter a year >1582
+######################################################################

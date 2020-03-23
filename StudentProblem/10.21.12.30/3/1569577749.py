@@ -34,3 +34,12 @@ def leap(Jahreszahl: int) -> bool:
             Schaltjahr = False          
     return Schaltjahr
 
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1600) == True, "Fall: durch 4, 100 und 400 teilbar"
+    assert leap(1604) == True, "Fall: nur durch 4 teilbar"
+    assert leap(1603) == False, "Fall: nicht durch 4 teilbar"
+    assert leap(1700) == False, "Fall: durch 4 und 100 teilbar, nicht durch 400 teilbar"
+######################################################################

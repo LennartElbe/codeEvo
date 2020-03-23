@@ -15,3 +15,11 @@ def leap(year:int) -> bool:
         else:
             return False
             
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1580) == "Ungültige Eingabe"
+    assert leap(1900) == False
+    assert leap(1600) == True
+######################################################################

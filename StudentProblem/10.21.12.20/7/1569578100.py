@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n)->list:
 #gibt alle ganzzahligen Teiler mit  Modulo 0, von 1 bis n in einer Liste  wieder
     teiler = [n]
@@ -16,3 +17,11 @@ def divisors(n)->list:
     return teiler
 
         
+######################################################################
+## Lösung Teil 2. (Tests)
+def test_divisors():
+    assert divisors(1) == [1]
+    assert divisors(5) == [5, 1]
+    assert divisors(10) == [10, 1, 2, 5]
+    assert divisors(0)=="Ungültige Eingabe"
+######################################################################

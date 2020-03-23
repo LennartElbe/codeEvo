@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0):
     lst = []
     def postorder(Node):
@@ -57,3 +58,8 @@ class Node(Node0):
             postorder(Node.left)
             postorder(Node.right)
         return lst        
+######################################################################
+## Lösung Teil 2.
+def test_trees():
+    assert postorder(Node(Leaf(1), Leaf(2), 3)) == [1, 2, 3]
+######################################################################

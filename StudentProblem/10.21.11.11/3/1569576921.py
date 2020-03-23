@@ -23,3 +23,13 @@ def leap(year: int) -> bool:
     else:
         return False
 print(1640%400)
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(1582) == False
+    assert leap(1583) == False
+    assert leap(1600) == True
+    assert leap(1640) == False
+
+######################################################################

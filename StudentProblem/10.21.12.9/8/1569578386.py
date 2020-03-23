@@ -15,6 +15,7 @@ class Node0:
     self.left = left
     self.right = right
 
+## Lösung Teil 1.
 class Leaf(Leaf0):
     
     def __init__(self):
@@ -24,3 +25,7 @@ class Leaf(Leaf0):
         if tree is not None:
             print(tree.mark)
             preorder(tree.
+######################################################################
+## Lösung Teil 2.
+
+######################################################################

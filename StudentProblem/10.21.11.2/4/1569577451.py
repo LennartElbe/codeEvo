@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teile 1. und 2.
 class Vigenere:
     """Klasse zur Vignere-Verschlüsselung
     Attributes:key 
@@ -28,3 +29,11 @@ class Vigenere:
         """
         
     
+######################################################################
+## Lösung Teil 3. (Tests)
+def test_vigenere():
+    v = Viginere()
+    v.k = "Hallo"
+    assert v.encrypt(A) = "Hallo"
+    assert v.decrypt(A) = "Hallo"
+######################################################################

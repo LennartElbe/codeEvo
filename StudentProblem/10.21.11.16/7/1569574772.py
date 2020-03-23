@@ -4,6 +4,7 @@ import string
 import random
 import pytest
 
+## Lösung Teil 1.
 def divisors(n: int) -> list:
     m = n + 1
     teiler = []
@@ -13,3 +14,7 @@ def divisors(n: int) -> list:
             
 
 
+######################################################################
+## Lösung Teil 2. (Tests)
+print(divisors(20))
+######################################################################

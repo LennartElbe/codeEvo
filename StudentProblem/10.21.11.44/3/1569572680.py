@@ -15,3 +15,10 @@ def leap(n : int) -> bool:
         return "kein Schaltjahr"
         
         
+######################################################################
+## Lösung Teil 2 (Tests)
+
+def test_leap():
+    assert leap(2000) == pass # regular
+    assert leap(1581) == pass #less than 1582
+######################################################################

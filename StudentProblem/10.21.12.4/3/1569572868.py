@@ -22,3 +22,14 @@ def leap(m: int)->bool:
         return False
     else:
         return True
+######################################################################
+## Lösung Teil 2 (Tests)
+
+assert leap(500) == False
+assert leap(2016) == False
+assert leap(2017) == True
+
+
+
+
+######################################################################
