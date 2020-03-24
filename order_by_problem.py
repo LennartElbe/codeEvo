@@ -1,14 +1,6 @@
 """Take input directory and build a new directory which contains the solutions
 but not the hiddenCode written by Professor Thiemann.
 """
-# There's an error in here somewhere which causes the unit tests not to be
-# included in the solution string.
-# unit tests are identified by:
-# "## Loesung Teil 2. (Tests)"
-# A unit test's end is identified by:
-# "######################################################################"
-# I need to find the part of my code which checks each read line for these
-# identifiers.
 
 import glob
 import os

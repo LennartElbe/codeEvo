@@ -1,4 +1,5 @@
 var editor;
+var output;
 var diffeditors;
 var _data;
 // fills in dropdowns, swap displayed code, implementation of next and previous buttons
@@ -7,6 +8,9 @@ jQuery(document).ready(function() {
     editor = ace.edit("program-code");
     editor.setTheme("ace/theme/github");
     editor.session.setMode("ace/mode/python");
+    output = ace.edit("program-output");
+    output.setTheme("ace/theme/github");
+    output.session.setMode("ace/mode/python");
     // fill in the dropdowns
     jQuery.getJSON('php/getScripts.php', function(data) {
         var students = {};
@@ -71,6 +75,7 @@ jQuery(document).ready(function() {
         var student = jQuery('#dropdownSwitchStudent a.active').text();
         var problem = jQuery('#dropdownSwitchProblem a.active').text();
         var path = ["StudentProblem", student, problem, version].join('/');
+        var outputpath = ["Output", "StudentProblem", student, problem, version].join('/');
         jQuery.get(path, function(data) {
             editor.setValue(data);
             diffeditors = differ.getEditors();
@@ -80,6 +85,9 @@ jQuery(document).ready(function() {
             diffeditors.left.clearSelection();
             diffeditors.right.clearSelection();
         });
+        jQuery.get(outputpath, function(data) {
+            output.setValue(data);
+        })
         jQuery('#versionsDropDown span.whichVersion').text(version);
     });
     // next and previous buttons
