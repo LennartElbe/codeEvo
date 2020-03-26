@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
     output = ace.edit("program-output");
     output.setTheme("ace/theme/github");
     output.session.setMode("ace/mode/python");
-    // fill in the dropdowns
+    // fill in the dropdowns and matrix
     jQuery.getJSON('php/getScripts.php', function(data) {
         var students = {};
         for (var i = 0; i < data.length; i++) {
@@ -29,9 +29,44 @@ jQuery(document).ready(function() {
         for (var i = 0; i < st.length; i++) {
             jQuery('#dropdownSwitchStudent').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + st[i] + "\">" + st[i] + "</a>");
         }
+        // fill in the matrix
+        var studentCount = st.length;
+        for (let i = 0; i < studentCount; i++) {
+            currentStudent = st[i];
+            currentStudentsAttempts = _data[currentStudent];
+            var problemsAttempted = [];
+            for (let j = 0; j < currentStudentsAttempts.length; j ++) {
+                if (!(problemsAttempted.includes(parseInt(currentStudentsAttempts[j][0])))) {
+                    problemsAttempted.push(parseInt(currentStudentsAttempts[j][0]));
+                }
+            }
+            var buttonGroup = "<div class=\"form-group\"><label for=\"student-button-group-" + i + "\">Student " + i + "</label><div class=\"form-control\">";
+            buttonGroup = buttonGroup + "<div id=\"student-button-group-" + i + "\" class=\"btn-group btn-matrix\">";
+            for (let step = 0; step < problemsAttempted.length; step++) {
+                buttonGroup += "<button type=\"button\" class=\"btn btn-default\" student-value=\"" + currentStudent + "\" btn-value=\"" + problemsAttempted[step] + "\">Problem " + problemsAttempted[step] + "</button>";
+            }
+            buttonGroup += "</div></div></div>";
+            jQuery('#StudentButtons').append(buttonGroup);
+        }
     });
+    // clicking on the matrix buttons
+    jQuery('#StudentButtons').on('click', 'button', function () {
+        // when a button in a group gets clicked
+        var buttonId = jQuery(this).attr('btn-value');
+        var StudentId = jQuery(this).attr('student-value');
+        console.log("id: " + buttonId + ", student:" + StudentId);
+        // simulate button clicks to swap student/problem/version
+        // first swap the student
+        jQuery("#dropdownSwitchStudent a[value=\'" + StudentId + "\']").trigger("click");
+        // then swap problem
+        jQuery("#dropdownSwitchProblem a[value=\'" + buttonId + "\']").trigger("click");
+        // then activate the first version
+        jQuery("#dropdownSwitchVersion a:first-child").trigger("click");
+    });
+
     // add problems to dropdown
     jQuery('#dropdownSwitchStudent').on('click', "a.dropdown-item", function() {
+        console.log("switchstudent was called with:" + jQuery(this).text);
         jQuery("#dropdownSwitchStudent").children().removeClass('active');
         jQuery(this).addClass('active');
         jQuery('#dropdownSwitchProblem').children().remove();
@@ -65,6 +100,7 @@ jQuery(document).ready(function() {
         for (var i = 0; i < ar.length; i++) {
             jQuery('#dropdownSwitchVersion').append("<a class=\"dropdown-item\" data-toggle=\"button\" value=\"" + ar[i] + "\">" + ar[i] + "</a>");
         }
+        jQuery("#dropdownSwitchVersion a:first-child").trigger("click");
     });
     // switch displayed code when version is selected
     jQuery('#dropdownSwitchVersion').on('click', "a.dropdown-item", function() {

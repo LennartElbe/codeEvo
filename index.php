@@ -54,31 +54,7 @@
             </div>
         </div>
         <div class="row-fluid">
-            <div class ="col-md-12">
-                <table class="table table-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col" style="width: 3%">1</th>
-                            <th scope="col" style="width: 3%">2</th>
-                            <th scope="col" style="width: 3%">3</th>
-                            <th scope="col" style="width: 3%">4</th>
-                            <th scope="col" style="width: 3%">5</th>
-                            <th scope="col" style="width: 3%">6</th>
-                            <th scope="col" style="width: 3%">9</th>
-                            <th scope="col" style="width: 3%">8</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td><button class="btn" type="button" id="blabla">111</button></td>
-                            <td><button class="btn" type="button" id="blabla">11</button></td>
-                            <td><button class="btn" type="button" id="blabla">1</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class ="col-md-12" id="StudentButtons"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
