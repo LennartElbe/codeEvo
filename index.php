@@ -15,9 +15,10 @@
                 <h1>Code Evo</h1>
                 <h5>Select a student, a problem, and a version. The left side of
                      the diff is the currently selected version, and the right
-                      side is the last viewed version. Diff is seen in blue. The
-                       third text area below is under construction.
-                </h5>
+                      side is the last viewed version. Diff is seen in blue.
+                      Below the diffs you can see the output of the code on the right.
+                      The output is not live.
+                      
                 <div class="dropdown" style="display: inline-flex;">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="studentsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Students <span class="whichStudent"></button>
                     <div class="dropdown-menu" id="dropdownSwitchStudent" aria-labelledby="dropdownMenuButton">
